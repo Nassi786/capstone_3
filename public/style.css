@@ -1,0 +1,148 @@
+/* ===== Reset & Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Typography and Headings ===== */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #050505;
+    font-weight: 600;
+}
+
+p {
+    font-size: 16px;
+    color: #040404;
+}
+
+/* ===== Links and Buttons ===== */
+a, button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #c16ba8;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+a:hover, button:hover {
+    background: #e78bb6;
+    transform: translateY(-3px);
+}
+
+/* ===== Form Styling ===== */
+form {
+    background: #ec899e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ccc;
+    margin: 30px 0;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #67c6c0;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #74e0f3;
+}
+
+/* ===== Blog Post Styling ===== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #2d7d4c;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #ccc;
+    margin: 20px 0;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #bbb;
+}
+
+li h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+li p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* ===== Edit & Delete Buttons ===== */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.actions a, .actions form button {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #eb8791;
+    transition: 0.3s;
+}
+
+.actions a:hover, .actions form button:hover {
+    background: #7d5256;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    form, li {
+        padding: 20px;
+    }
+
+    input, textarea, button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Home</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>My Blog</h1>
+
+    <!-- Centering the button -->
+    <div class="center">
+        <a href="/create" class="btn">Create New Post</a>
+    </div>
+
+    <% if (posts.length > 0) { %>
+        <ul>
+            <% posts.forEach(post => { %>
+                <li>
+                    <h2><%= post.title %></h2>
+                    <p><%= post.content %></p>
+
+                    <div class="actions">
+                        <a href="/edit/<%= post.id %>">Edit</a>
+
+                        <form action="/delete/<%= post.id %>" method="POST" style="display: inline;">
+                            <button type="submit" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p class="no-posts">No posts yet.</p>
+    <% } %>
+
+</div>
+
+</body>
+</html>

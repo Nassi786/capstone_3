@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Create New Post</h1>
+
+    <% if (error) { %>
+        <p style="color: rgb(249, 172, 249);"><%= error %></p>
+    <% } %>
+
+    <form action="/create" method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" required>
+
+        <label>Content:</label>
+        <textarea name="content" required></textarea>
+
+        <button type="submit">Create Post</button>
+    </form>
+
+    <a href="/">Back to Blog</a>
+</body>
+
+</html>
